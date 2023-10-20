@@ -21,5 +21,17 @@ namespace emprestimosJogos.Controllers
         {
             return View();
         }
+		[HttpPost]
+		public IActionResult NovoRegisto(EmprestimoModel emprestimos)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Emprestimos.Add(emprestimos);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+                
+            }
+            return View();
+        }
     }
 }

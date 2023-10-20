@@ -1,0 +1,26 @@
+﻿@model EmprestimoModel
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post" asp-controller="Emprestimos" asp-action="NovoRegisto">
+                <div class="form-group">
+                    <label for="recebedor">Recebedor:</label>
+                    <input type="text" class="form-control" id="recebedor" asp-for="Recebedor" placeholder="Insira o nome do Recebedor">
+                <span class="text-danger" asp-validation-for="Recebedor"></span>
+                </div>
+                <div class="form-group">
+                    <label for="fornecedor">Fornecedor:</label>
+                    <input type="text" class="form-control" id="fornecedor" asp-for="Fornecedor" placeholder="Insira o nome do Fornecedor">
+                    <span class="text-danger" asp-validation-for="Fornecedor"></span>
+                </div>
+                <div class="form-group">
+                    <label for="jogo_emprestado">Jogo Emprestado:</label>
+                    <input type="text" class="form-control" id="jogo_emprestado" asp-for="JogoEmprestado"  placeholder="Insira o nome do Jogo Emprestado">
+                    <span class="text-danger" asp-validation-for=" JogoEmprestado"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                <button type="submit" class="btn btn-primary" asp-controller="Emprestimos" asp-action="Index">Voltar</button>
+            </form>
+        </div>
+    </div>
+</div>
