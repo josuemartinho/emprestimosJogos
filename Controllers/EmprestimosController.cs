@@ -16,5 +16,10 @@ namespace emprestimosJogos.Controllers
             IEnumerable<EmprestimoModel> emprestimos= _db.Emprestimos;
             return View(emprestimos);
         }
+        [HttpGet]
+        public IActionResult NovoRegisto()
+        {
+            return View();
+        }
     }
 }
